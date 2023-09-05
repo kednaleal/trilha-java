@@ -1,2 +1,2 @@
-# trilha-java
-repositório para atividades com java
+# TechFince-java
+repositório para atividades da disiplina de POO
