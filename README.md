@@ -1,2 +1,2 @@
 # TechFinance-java
-repositório para atividades da disiplina de POO
+repositório para atividades da disciplina de POO
