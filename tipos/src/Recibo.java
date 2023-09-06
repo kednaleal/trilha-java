@@ -6,6 +6,7 @@ public class Recibo{
 
     
     
+    
     public void compartilhar(){
         system.out.println("Deseja Compartilhar ")
     }
