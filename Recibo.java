@@ -1,12 +1,15 @@
 public class Recibo{
 
-    String destinatario;
-    String instituicao;
-    String origem;
+    private String destinatario;
+    private String instituicao;
+    private String origem;
+
+    
     
     public void compartilhar(){
         system.out.println("Deseja Compartilhar ")
     }
+
 }
 
 

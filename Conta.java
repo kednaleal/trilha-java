@@ -1,16 +1,27 @@
 public class Conta{
     private int agencia;
-    private int numeroConta;
-    private float saldo;
+    private String numeroConta;
+    private Double saldo = 0.0;
 
-    public void VerSaldo(float saldo ){
-        saldo = 0;
-        System.out.println("O saldo é: ", saldo);
-            Scanner in = new Scanner(System.in);
-            String saldo = in.nextLine();
-    
-        
+    public int getAgencia(){
+        return agencia;
     }
+    public void setAgencia(int agencia){
+        this.agencia = agencia;
+    }
+    public String getNumeroConta(){
+        return numeroConta;
+    }
+    public void setNumeroConta(String Conta){
+        this.numeroConta = Conta;
+    }
+    public Double getSaldo(){
+        return saldo;
+    }
+    public void setSaldo(Double saldo){
+        this.saldo = saldo;
+    }
+
     
     
 }
