@@ -1,13 +1,13 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Transacoes{
+    private static final Transacoes Transacoes = null;
     private String destinatario;
     private Double valor;
     private String descricao;
     LocalDate vencimento;
-    private List<Transacoes> historico;
-
-    historico = new ArrayList<>();
+    private List<Transacoes> historico = new ArrayList<>();
 
     public String getDestinatario(){
         return destinatario;
@@ -15,7 +15,7 @@ public class Transacoes{
     public void setDestinario(String destinatario ){
         this.destinatario = destinatario;
     }
-    public String getValor(){
+    public Double getValor(){
         return valor;
     }
     public void setValor(Double valor ){
@@ -37,13 +37,18 @@ public class Transacoes{
             System.out.println("Não é possivél depósitar");
         }
 
-        historico.add(transacoes);
+        historico.add(Transacoes);
     }
 
+    private void setSaldo(double d) {
+    }
+    private Double getSaldo() {
+        return null;
+    }
     public void sacar(){
         if(valor > 0 && this.getSaldo() >=valor){
             System.out.println("Saque feito com sucesso");
-            historico.add(transacoes);
+            historico.add(Transacoes);
         }
         else{
             System.out.println("Não foi possivél realizar o saque");
