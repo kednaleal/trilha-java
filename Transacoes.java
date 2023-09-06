@@ -1,13 +1,17 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalDate;
 
-public class Transacoes{
-    private static final Transacoes Transacoes = null;
+public class Transacoes {
     private String destinatario;
     private Double valor;
     private String descricao;
     LocalDate vencimento;
-    private List<Transacoes> historico = new ArrayList<>();
+
+    public Transacao(String destino, LocalDate venc,double valor, String desc){
+        this.destinatario = destino;
+        this.vencimento = venc;
+        this.Valor = valor;
+        this.descricao = desc;
+    }
 
     public String getDestinatario(){
         return destinatario;
@@ -29,36 +33,11 @@ public class Transacoes{
     }
 
 
-    public void deposito(Double valor){
-        if(valor > 0){
-            setSaldo(getSaldo() + valor);
-            System.out.println("Depósito feito com sucesso");
-        }else{
-            System.out.println("Não é possivél depósitar");
-        }
-
-        historico.add(Transacoes);
+    public String toString(){
+        return "Transação{ " +
+        "data=" + data +
+        ", valor =" + valor+
+        ", descricao = " + desc '}';
     }
 
-    private void setSaldo(double d) {
-    }
-    private Double getSaldo() {
-        return null;
-    }
-    public void sacar(){
-        if(valor > 0 && this.getSaldo() >=valor){
-            System.out.println("Saque feito com sucesso");
-            historico.add(Transacoes);
-        }
-        else{
-            System.out.println("Não foi possivél realizar o saque");
-        }
-    }
-
-    public void mostrarHistorico(){
-        System.out.println("Histórico de transações: ");
-        for(Transacoes transacoes : historico){
-            System.out.println(transacoes);
-        }
-    }
 }
