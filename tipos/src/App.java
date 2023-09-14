@@ -1,15 +1,15 @@
-import java.util.Scanner;
+
 
 public class App {
+
     public static void main(String[] args) throws Exception {
-        Cliente cliente = new Cliente();
-        Transacoes transacoes = Transacoes();
+      Conta conta = new Conta(1, 100, "123456789");
 
+      Cliente cliente = new Cliente("Samuca", "123.456.789-00", "10/10/2020",  conta);
+
+      System.out.printf(cliente.nome);
         
-        transacoes.deposito(1000.0);
-        transacoes.deposito(500.0);
-        transacoes.saque(150.0);
-        transacoes.mostrarHistorico();
-
     }
+
+
 }

@@ -1,13 +1,16 @@
-import java.util.ArrayList;
 
-public class Transacoes{
+public class Transacoes {
     private String destinatario;
-    private Double valor;
+    private int valor;
     private String descricao;
-    LocalDate vencimento;
-    private List<Transacoes> historico;
+    public String vencimento;
 
-    historico = new ArrayList<>();
+    public Transacoes(String destino, String venc,int valor, String desc){
+        this.destinatario = destino;
+        this.vencimento = venc;
+        this.valor = valor;
+        this.descricao = desc;
+    }
 
     public String getDestinatario(){
         return destinatario;
@@ -15,10 +18,10 @@ public class Transacoes{
     public void setDestinario(String destinatario ){
         this.destinatario = destinatario;
     }
-    public String getValor(){
+    public int getValor(){
         return valor;
     }
-    public void setValor(Double valor ){
+    public void setValor(int valor ){
         this.valor = valor;
     }
     public String getDescricao(){
@@ -29,31 +32,11 @@ public class Transacoes{
     }
 
 
-    public void deposito(Double valor){
-        if(valor > 0){
-            setSaldo(getSaldo() + valor);
-            System.out.println("Depósito feito com sucesso");
-        }else{
-            System.out.println("Não é possivél depósitar");
-        }
-
-        historico.add(transacoes);
+    public String toString(){
+        return "Transação{ " +
+        "data=" + vencimento +
+        ", valor =" + valor+
+        ", descricao = " + descricao + " } ";
     }
 
-    public void sacar(){
-        if(valor > 0 && this.getSaldo() >=valor){
-            System.out.println("Saque feito com sucesso");
-            historico.add(transacoes);
-        }
-        else{
-            System.out.println("Não foi possivél realizar o saque");
-        }
-    }
-
-    public void mostrarHistorico(){
-        System.out.println("Histórico de transações: ");
-        for(Transacoes transacoes : historico){
-            System.out.println(transacoes);
-        }
-    }
 }
